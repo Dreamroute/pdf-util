@@ -5,6 +5,6 @@
 <dependency>
   <groupId>com.github.dreamroute</groupId>
   <artifactId>pdf-util</artifactId>
-  <version>1.0-RELEASE</version>
+  <version>最新-RELEASE</version>
 </dependency>
 ```
