@@ -14,7 +14,7 @@ import com.spire.pdf.widget.PdfPageCollection;
  * @author w.dehai
  *
  */
-public class SpireUtil {
+class SpireUtil {
 
     private SpireUtil() {}
 
