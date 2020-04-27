@@ -1,5 +1,5 @@
 # pdf-util
-操作PDF的工具
+PDF签名工具，将一张png图片覆盖到PDF文件上面
 # 依赖
 ```
 <dependency>
