@@ -1,5 +1,6 @@
 # pdf-util
 PDF签名工具，将一张png图片覆盖到PDF文件上面，类似这样：![Image text](https://raw.githubusercontent.com/Dreamroute/pdf-util/master/src/main/resources/result/result.png)
+>>>>>>> branch 'master' of https://github.com/Dreamroute/pdf-util.git
 
 # 依赖
 ```
