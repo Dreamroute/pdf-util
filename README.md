@@ -8,3 +8,8 @@
   <version>最新-RELEASE</version>
 </dependency>
 ```
+
+# 使用
+```
+调用SignUtil.sign方法即可
+```
