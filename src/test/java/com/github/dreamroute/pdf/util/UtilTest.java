@@ -15,24 +15,29 @@ public class UtilTest {
     private static final int x = 10;
     private static final int y = 20;
     
-
+    /**
+     * itext
+     */
     @Test
-    public void spireAddImgToDocTest() {
+    public void signItextTest() {
         try (InputStream docIn = new FileInputStream(new File("d:/mm.pdf"));
-                InputStream imgIn = new FileInputStream(new File("d:/tm1.png"));
+                InputStream imgIn = new FileInputStream(new File("d:/tm.png"));
                 OutputStream out = new FileOutputStream(new File("d:/result3.pdf"))) {
-            out.write(SpireUtil.addImgToDoc(docIn, imgIn, x, y));
+            out.write(SignUtil.sign(docIn, imgIn, x, y));
         } catch (Exception e) {
             throw new PdfUtilException(e.getMessage(), e);
         }
     }
-
+    
+    /**
+     * spire
+     */
     @Test
-    public void itextAddImgToDocTest() {
+    public void signSpireTest() {
         try (InputStream docIn = new FileInputStream(new File("d:/mm.pdf"));
-                InputStream imgIn = new FileInputStream(new File("d:/tm1.png"));
+                InputStream imgIn = new FileInputStream(new File("d:/tm.png"));
                 OutputStream out = new FileOutputStream(new File("d:/result4.pdf"))) {
-            out.write(ItextUtil.addImgToDoc(docIn, imgIn, x, y));
+            out.write(SignUtil.sign(Type.SPIRE, docIn, imgIn, x, y));
         } catch (Exception e) {
             throw new PdfUtilException(e.getMessage(), e);
         }
