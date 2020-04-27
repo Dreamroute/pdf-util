@@ -20,9 +20,9 @@ public class UtilTest {
      */
     @Test
     public void signItextTest() {
-        try (InputStream docIn = new FileInputStream(new File("d:/mm.pdf"));
-                InputStream imgIn = new FileInputStream(new File("d:/tm.png"));
-                OutputStream out = new FileOutputStream(new File("d:/result3.pdf"))) {
+        try (InputStream docIn = new FileInputStream(new File("d:/source.pdf"));
+                InputStream imgIn = new FileInputStream(new File("d:/sign.png"));
+                OutputStream out = new FileOutputStream(new File("d:/result1.pdf"))) {
             out.write(SignUtil.sign(docIn, imgIn, x, y));
         } catch (Exception e) {
             throw new PdfUtilException(e.getMessage(), e);
@@ -34,9 +34,9 @@ public class UtilTest {
      */
     @Test
     public void signSpireTest() {
-        try (InputStream docIn = new FileInputStream(new File("d:/mm.pdf"));
-                InputStream imgIn = new FileInputStream(new File("d:/tm.png"));
-                OutputStream out = new FileOutputStream(new File("d:/result4.pdf"))) {
+        try (InputStream docIn = new FileInputStream(new File("d:/source.pdf"));
+                InputStream imgIn = new FileInputStream(new File("d:/sign.png"));
+                OutputStream out = new FileOutputStream(new File("d:/result2.pdf"))) {
             out.write(SignUtil.sign(Type.SPIRE, docIn, imgIn, x, y));
         } catch (Exception e) {
             throw new PdfUtilException(e.getMessage(), e);
