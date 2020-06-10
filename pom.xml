@@ -45,14 +45,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>com.e-iceblue</id>
-			<name>e-iceblue</name>
-			<url>http://repo.e-iceblue.com/nexus/content/groups/public/</url>
-		</repository>
-	</repositories>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -129,16 +121,6 @@
 	</build>
 
 	<dependencies>
-		<dependency>
-			<groupId>e-iceblue</groupId>
-			<artifactId>spire.pdf.free</artifactId>
-			<version>2.2.2</version>
-		</dependency>
-		<dependency>
-			<groupId>com.itextpdf</groupId>
-			<artifactId>itextpdf</artifactId>
-			<version>5.5.13.1</version>
-		</dependency>
 		<dependency>
 			<groupId>com.itextpdf</groupId>
 			<artifactId>itextpdf</artifactId>

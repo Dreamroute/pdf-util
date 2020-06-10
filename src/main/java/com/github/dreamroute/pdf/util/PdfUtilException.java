@@ -1,4 +1,4 @@
-package com.github.dreamroute.pdf.util.exception;
+package com.github.dreamroute.pdf.util;
 
 /**
  * 
