@@ -24,7 +24,7 @@ class ItextUtil {
     /**
      * 将一个图片添加到PDF文件上，类似签名
      */
-    public static byte[] addImgToDoc(InputStream docInput, InputStream imgInput, int x, int y, float imgWidth, float imgHeight, int[] pageNum) {
+    public static byte[] addImgToDoc(InputStream docInput, InputStream imgInput, int x, int y, float imgWidth, float imgHeight, float rotation, int[] pageNum) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         try {
             PdfReader reader = new PdfReader(docInput);
@@ -35,6 +35,7 @@ class ItextUtil {
             Image img = Image.getInstance(imgBytes);
             img.scaleAbsoluteWidth(imgWidth);
             img.scaleAbsoluteHeight(imgHeight);
+            img.setRotation(rotation);
 
             img.setAbsolutePosition(x, y);
             for (int pn : pageNum) {
