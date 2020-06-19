@@ -35,7 +35,7 @@ class ItextUtil {
             Image img = Image.getInstance(imgBytes);
             img.scaleAbsoluteWidth(imgWidth);
             img.scaleAbsoluteHeight(imgHeight);
-            img.setRotation(rotation);
+            img.setRotationDegrees(rotation); // 旋转角度
 
             img.setAbsolutePosition(x, y);
             for (int pn : pageNum) {

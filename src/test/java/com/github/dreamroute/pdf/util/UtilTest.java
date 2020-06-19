@@ -15,7 +15,7 @@ public class UtilTest {
     private static final int y = 20;
     private static final float imgWidth = 100;
     private static final float imgHeight = 100;
-    private static final float rotation = 45F;
+    private static final float rotation = 90F;
 
     /**
      * itext
