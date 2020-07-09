@@ -29,16 +29,17 @@ class ItextUtil {
         try {
             PdfReader reader = new PdfReader(docInput);
             PdfStamper stamp = new PdfStamper(reader, baos);
+            stamp.setRotateContents(false);
             byte[] imgBytes = new byte[imgInput.available()];
             IOUtils.read(imgInput, imgBytes);
 
             Image img = Image.getInstance(imgBytes);
             img.scaleAbsoluteWidth(imgWidth);
             img.scaleAbsoluteHeight(imgHeight);
-            img.setRotationDegrees(rotation); // 旋转角度
 
             img.setAbsolutePosition(x, y);
             for (int pn : pageNum) {
+                img.setRotationDegrees(rotation + reader.getPageRotation(pn)); // 旋转角度
                 PdfContentByte over = stamp.getOverContent(pn);
                 over.addImage(img);
             }

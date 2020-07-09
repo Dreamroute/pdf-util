@@ -11,11 +11,12 @@ import java.io.OutputStream;
 
 public class UtilTest {
     
-    private static final int x = 400;
-    private static final int y = 20;
-    private static final float imgWidth = 100;
-    private static final float imgHeight = 100;
-    private static final float rotation = 90F;
+    private static final int x = 12;
+    private static final int y = 4;
+    private static final float imgWidth = 110;
+    private static final float imgHeight = 50;
+//    private static final float rotation = 90F;
+    private static final float rotation = 0F;
 
     /**
      * itext
@@ -25,7 +26,7 @@ public class UtilTest {
         try (InputStream docIn = new FileInputStream(new File("d:/source.pdf"));
                 InputStream imgIn = new FileInputStream(new File("d:/sign.png"));
                 OutputStream out = new FileOutputStream(new File("d:/result1.pdf"))) {
-            out.write(SignUtil.sign(docIn, imgIn, x, y, imgWidth, imgHeight, rotation, 1, 2));
+            out.write(SignUtil.sign(docIn, imgIn, x, y, imgWidth, imgHeight, rotation,  2));
             Assertions.assertTrue(true);
         } catch (Exception e) {
             throw new PdfUtilException(e.getMessage(), e);
