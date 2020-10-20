@@ -34,11 +34,17 @@ class ItextUtil {
             IOUtils.read(imgInput, imgBytes);
 
             Image img = Image.getInstance(imgBytes);
-            img.scaleAbsoluteWidth(imgWidth);
-            img.scaleAbsoluteHeight(imgHeight);
 
             img.setAbsolutePosition(x, y);
             for (int pn : pageNum) {
+                int rr = reader.getPageRotation(pn) / 90;
+                if (rr % 2 == 1) {
+                    float t = imgWidth;
+                    imgWidth = imgHeight;
+                    imgHeight = t;
+                }
+                img.scaleAbsoluteWidth(imgWidth);
+                img.scaleAbsoluteHeight(imgHeight);
                 img.setRotationDegrees(rotation + reader.getPageRotation(pn)); // 旋转角度
                 PdfContentByte over = stamp.getOverContent(pn);
                 over.addImage(img);
